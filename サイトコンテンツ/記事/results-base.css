@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper-header{
+    padding: 10px 150px;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    top: 0;
+    background-color:white;
+
+}
+
+header h1{ 
+    color :#64629D;
+    font-size: 50px;
+
+}
+
+li{
+    list-style: none;
+    margin-left: 50px;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav-box li a {
+    color: #EDECFC;
+}
+
+.title-nav p{
+    font-size: 25px;
+}
+
+li:hover{
+    opacity: 0.5;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-box li{
+    font-size: 30px;
+    background-color: #64629D;
+    border-radius: 30px;
+    padding: 10px 20px;
+
+}
+
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.item-wrapper{
+    background-color: #EDECFC;
+    margin: auto 20px;
+    width: 400px;
+    height: 400px;
+}
+
+
+
+.wrapper h1{
+    background-color:#64629D;
+    width: 300px;
+    color:black;
+
+}
+
+.item-box{
+    display: flex;
+
+}
+
+.wrapper a img{
+    width: 300px;
+    height: 300px;
+    box-shadow:black 6px 10px 18px 9px;
+    object-fit: contain ;
+
+}
+
+.sec-p{
+    padding-top: 10px;
+    padding-left: 10px;
+
+}
+
+h2{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.f-p{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+@media screen and (min-width:768px) {
+    
+    .wrapper img{
+        width: 95%;
+
+
+    }
+
+
+
+}
+
+
+@media screen and (max-width:625px) {
+
+    .wrapper{
+        width: 95%;
+        margin:auto;
+        padding-left: 100px;
+        margin-bottom: 30px;
+
+
+
+    }
+
+
+
+    .wrapper-header{
+        padding-left: 50px;
+        margin-bottom: 60px;}
+        
+
+ 
+        header h1{
+            width: 10px;
+            
+        }
+
+        .nav-box a{
+            width: 10px;
+        }
+
+        .wrapper{
+            padding-left: 0;
+        }
+        h2{
+            font-size: 15px;
+        }
+
+        p{
+            font-size: 13px;
+        }
+        .item-wrapper{
+            width: 50%;
+            height: 900px;
+        }
+
+        .wrapper a img{
+            width: 150px;
+            height: 150px;
+            margin-top: 40px;
+        }
+
+     
+}

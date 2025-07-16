@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header img{
+    width: 100%;
+}
+
+/* ハンバーガーの位置と見た目 */
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+    width: 100%;
+}
+
+/* 初期状態：非表示（アニメーション可能） */
+.nav-menu {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #333;
+    border: 1px solid #ccc;
+    padding: 30px 20px;
+    z-index: 9;
+    height: 100%;
+    width: 500px;
+    font-size: 40px;
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+/* 表示時 */
+.nav-menu.active {
+    opacity: 0.95;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 各バー（横線）の共通スタイル */
+.hamburger span {
+    display: block;
+    height: 4px;
+    background-color:white;
+    border-radius: 2px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* ハンバーガーがアクティブ状態のとき（×に変化） */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+.nav-menu ul li {
+    margin: 10px 0;
+    padding-top: 50px;
+ 
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color:aliceblue;
+}
+
+/* 表示用クラス */
+.nav-menu.active {
+    display: block;
+}
+
+
+/* メイン画像をラップする位置基準 */
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 波紋エフェクト用のクラス */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(3); /* 15 → 10 にして、広がりすぎを防ぐ */
+    width: 400px;          /* 200px → 150px 程度に調整 */
+    animation: ripple-animation 5s ease-out;
+    background: rgba(255, 255, 255, 0.15); /* 0.3 → 0.15 に弱める */
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.2;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(8);
+        opacity: 0;
+    }
+}

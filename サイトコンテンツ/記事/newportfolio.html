@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/サイトコンテンツ/記事/newportfolio.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <img  id="main-image" src="/img/自然メイン.png">
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">わたしたちについて</a></li>
+                <li><a href="#">事業内容</a></li>
+                <li><a href="#">お問い合わせ・採用</a></li>
+            </ul>
+        </nav>
+        
+    
+    </header>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("nav-menu");
+    
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");  
+            navMenu.classList.toggle("active");
+        });
+
+    
+    const mainImage = document.getElementById('main-image');
+
+    mainImage.addEventListener('mousemove', function(e) {
+        const rect = mainImage.getBoundingClientRect();
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+
+        // マウス座標（画像内の位置）を取得
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        ripple.style.width = ripple.style.height = '100px';
+        ripple.style.marginLeft = '-50px';
+        ripple.style.marginTop = '-50px';
+
+        // header内に追加
+        mainImage.parentElement.appendChild(ripple);
+
+        // アニメーション後に削除
+        setTimeout(() => {
+            ripple.remove();
+        }, 1000);
+    });
+
+
+    </script>
+    
+</body>
+</html>
